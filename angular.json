@@ -1,6 +1,6 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "version": 1, 
+  "version": 1,
   "newProjectRoot": "projects",
   "projects": {
     "bookstagram": {
@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "bookstagram"
+    }
+  },
+  "defaultProject": "bookstagram",
+  "cli": {
+    "analytics": "036a3f10-a92d-48c5-94cb-200c5d223aa3"
+  }
 }
