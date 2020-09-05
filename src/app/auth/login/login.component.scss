@@ -1,0 +1,39 @@
+:host {
+	display: flex;
+	justify-content: center;
+
+	.login-box {
+		margin-top: 150px;
+		width: 300px;
+		border: 1px solid #ddd;
+		padding: 24px;
+
+		.logo {
+			width: 250px;
+			display: block;
+			margin: 0 auto 8px auto;
+		}
+
+		.form-group {
+			margin-bottom: 8px;
+			label {
+				display: block;
+				width: 100%;
+				padding: 4px;
+			}
+			input {
+				display: block;
+				width: 100%;
+				padding: 8px;
+				border: 1px solid #ddd;
+				box-sizing: border-box;
+				border-radius: 4px;
+			}
+		}
+
+		.submit {
+			margin-top: 16px;
+			text-align: center;
+		}
+	}
+}

@@ -1,1 +1,22 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap');
+@import './assets/styles/reset.scss';
+
+* {
+	font-family: 'Roboto', sans-serif;
+}
+
+.btn {
+	border: none;
+	color: white;
+	padding: 8px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	cursor: pointer;
+	border-radius: 4px;
+}
+
+.btn-primary {
+	background-color: #4caf50; /* Green */
+}
