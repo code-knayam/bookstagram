@@ -80,5 +80,14 @@
 			"image": "https://itbook.store/img/books/9781430230519.png",
 			"url": "https://itbook.store/books/9781430230519"
 		}
+	],
+	"users": [
+		{
+			"id": 1,
+			"name": "Varun Srinivas",
+			"email": "varun@coditas.com",
+			"username": "varun",
+			"password": "varun"
+		}
 	]
 }
