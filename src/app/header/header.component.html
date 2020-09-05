@@ -3,14 +3,17 @@
 		<img src="../../assets/images/logo-text.png" alt="Bookstagram Logo" />
 	</div>
 	<div class="nav-menu">
-		<div class="nav-menu-item">
+		<div class="nav-menu-item" *ngIf="isLoggedIn$ | async">
 			<a routerLink="home" routerLinkActive="active">Home</a>
 		</div>
-		<div class="nav-menu-item">
+		<div class="nav-menu-item" *ngIf="isLoggedOut$ | async">
 			<a routerLink="login" routerLinkActive="active">Login</a>
 		</div>
-		<div class="nav-menu-item">
+		<div class="nav-menu-item" *ngIf="isLoggedOut$ | async">
 			<a routerLink="register" routerLinkActive="active">Register</a>
+		</div>
+		<div class="nav-menu-item" *ngIf="isLoggedIn$ | async">
+			<a (click)="logout()" routerLinkActive="active">Logout</a>
 		</div>
 	</div>
 </div>
