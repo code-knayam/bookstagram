@@ -3,4 +3,42 @@
 	height: 80px;
 	background-color: #2ecc71;
 	box-shadow: -1px 0 4px 0px rgba(0, 0, 0, 0.1);
+
+	.container {
+		// width: 1024px;
+		// margin: auto;
+		height: 100%;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		.logo {
+			display: flex;
+			height: 100%;
+			padding: 8px;
+			box-sizing: border-box;
+			img {
+				width: 250px;
+				align-self: center;
+			}
+		}
+
+		.nav-menu {
+			display: flex;
+			.nav-menu-item {
+				a {
+					display: block;
+					padding: 16px;
+					color: #444;
+					text-decoration: none;
+
+					&.active {
+						text-decoration: underline;
+						font-weight: bolder;
+						color: #111;
+					}
+				}
+			}
+		}
+	}
 }
