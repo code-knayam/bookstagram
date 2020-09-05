@@ -1,7 +1,9 @@
 import * as fromAuth from './reducers'
 
+import { AuthEffects } from './auth.effects'
 import { AuthRoutingModule } from './auth-routing.module'
 import { CommonModule } from '@angular/common'
+import { EffectsModule } from '@ngrx/effects'
 import { HttpClientModule } from '@angular/common/http'
 import { LoginComponent } from './login/login.component'
 import { NgModule } from '@angular/core'
@@ -18,6 +20,7 @@ import { authReducer } from './reducers/index'
 		HttpClientModule,
 		ReactiveFormsModule,
 		StoreModule.forFeature(fromAuth.authFeatureKey, authReducer),
+		EffectsModule.forFeature([AuthEffects]),
 	],
 })
 export class AuthModule {}

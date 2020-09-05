@@ -5,11 +5,6 @@ import { NgModule } from '@angular/core'
 
 const routes: Routes = [
 	{
-		path: '',
-		loadChildren: () =>
-			import('./auth/auth.module').then((m) => m.AuthModule),
-	},
-	{
 		path: 'home',
 		loadChildren: () =>
 			import('./books/books.module').then((m) => m.BooksModule),

@@ -28,6 +28,6 @@ export class HeaderComponent implements OnInit {
 
 	logout() {
 		this.store.dispatch(AuthActions.logout())
-		this.router.navigate(['login'])
+		// this.router.navigate(['login'])
 	}
 }
