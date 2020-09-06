@@ -1,0 +1,55 @@
+:host {
+	display: flex;
+	flex-direction: column;
+	width: 300px;
+	border: 1px solid #ddd;
+	box-sizing: border-box;
+	margin: 16px;
+
+	.image {
+		border-bottom: 1px solid #ddd;
+	}
+
+	.details {
+		padding: 8px;
+		.title {
+			font-size: 18px;
+			font-weight: bold;
+			margin-bottom: 8px;
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+		}
+
+		.sub-title {
+			font-size: 14px;
+			line-clamp: 2;
+			-webkit-line-clamp: 2;
+			-webkit-box-orient: vertical;
+			overflow: hidden;
+			display: -webkit-box;
+		}
+	}
+	.footer {
+		padding: 8px;
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: auto;
+		.price {
+			font-size: 18px;
+			font-weight: bold;
+		}
+		.actions {
+			display: flex;
+			.btn-action {
+				padding: 4px;
+				margin: 0 4px;
+				font-size: 12px;
+				cursor: pointer;
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+}

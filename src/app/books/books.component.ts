@@ -13,8 +13,4 @@ export class BooksComponent implements OnInit {
 	constructor(private booksService: BooksService) {}
 
 	ngOnInit(): void {}
-
-	reload() {
-		this.books$ = this.booksService.findAllBooks()
-	}
 }

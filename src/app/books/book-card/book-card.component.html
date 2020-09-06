@@ -1,0 +1,14 @@
+<div class="image">
+	<img src="{{ book.image }}" alt="" />
+</div>
+<div class="details">
+	<h2 class="title">{{ book.title }}</h2>
+	<h4 class="sub-title">{{ book.subtitle }}</h4>
+</div>
+<div class="footer">
+	<div class="price">{{ book.price }}</div>
+	<div class="actions">
+		<a (click)="edit()" class="btn-action edit">Edit</a>
+		<a (click)="remove()" class="btn-action delete">Delete</a>
+	</div>
+</div>

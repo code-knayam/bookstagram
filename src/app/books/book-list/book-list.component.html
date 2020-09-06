@@ -1,4 +1,6 @@
-asdf
-<div *ngFor="let book of books$ | async">
+<ng-container *ngFor="let book of books$ | async">
+	<bkst-book-card class="book" [book]="book"></bkst-book-card>
+</ng-container>
+<!-- <div *ngFor="let book of books$ | async">
 	<span>{{ book.title }}</span>
-</div>
+</div> -->
