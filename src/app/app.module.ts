@@ -1,3 +1,4 @@
+import { RouterState, StoreRouterConnectingModule } from '@ngrx/router-store'
 import { metaReducers, reducers } from './reducers/index'
 
 import { AppComponent } from './app.component'
@@ -21,12 +22,24 @@ import { environment } from '../environments/environment'
 		HttpClientModule,
 		ReactiveFormsModule,
 		AuthModule,
-		StoreModule.forRoot(reducers, { metaReducers }),
+		StoreModule.forRoot(reducers, {
+			metaReducers,
+			runtimeChecks: {
+				strictStateImmutability: true,
+				strictActionImmutability: true,
+				strictActionSerializability: true,
+				strictStateSerializability: true,
+			},
+		}),
 		StoreDevtoolsModule.instrument({
 			maxAge: 25,
 			logOnly: environment.production,
 		}),
 		EffectsModule.forRoot([]),
+		StoreRouterConnectingModule.forRoot({
+			stateKey: 'router',
+			routerState: RouterState.Minimal,
+		}),
 	],
 	providers: [],
 	bootstrap: [AppComponent],

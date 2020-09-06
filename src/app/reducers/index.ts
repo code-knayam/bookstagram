@@ -1,10 +1,13 @@
 import { ActionReducerMap, MetaReducer } from '@ngrx/store'
 
 import { AuthState } from '../auth/reducers'
+import { routerReducer } from '@ngrx/router-store'
 
 // tslint:disable-next-line:no-empty-interface
 export interface AppState {}
 
-export const reducers: ActionReducerMap<AppState> = {}
+export const reducers: ActionReducerMap<AppState> = {
+	router: routerReducer,
+}
 
 export const metaReducers: MetaReducer<AppState>[] = []
