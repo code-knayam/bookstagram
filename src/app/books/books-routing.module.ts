@@ -1,3 +1,4 @@
+import { BooksResolverService } from './services/books-resolver.service'
 import { RouterModule, Routes } from '@angular/router'
 
 import { BookFormComponent } from './book-form/book-form.component'
@@ -13,6 +14,9 @@ const routes: Routes = [
 			{
 				path: '',
 				component: BookListComponent,
+				resolve: {
+					books: BooksResolverService,
+				},
 			},
 			{
 				path: 'add',

@@ -1,3 +1,7 @@
+import { booksReducer } from './reducers/books.reducers'
+import { StoreModule } from '@ngrx/store'
+import { BooksEffectsService } from './services/books-effects.service'
+import { EffectsModule } from '@ngrx/effects'
 import { NgModule } from '@angular/core'
 import { CommonModule } from '@angular/common'
 
@@ -14,6 +18,11 @@ import { BookCardComponent } from './book-card/book-card.component'
 		BookListComponent,
 		BookCardComponent,
 	],
-	imports: [CommonModule, BooksRoutingModule],
+	imports: [
+		CommonModule,
+		BooksRoutingModule,
+		EffectsModule.forFeature([BooksEffectsService]),
+		StoreModule.forFeature('books', booksReducer),
+	],
 })
 export class BooksModule {}
